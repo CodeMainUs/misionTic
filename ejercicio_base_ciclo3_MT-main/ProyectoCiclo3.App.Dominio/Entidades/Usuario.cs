@@ -8,6 +8,7 @@ namespace ProyectoCiclo3.App.Dominio{
         public string telefono { get; set; }
         public string  mail { get; set; }
         //Agregar 
+        //conf
     }
 
 }
