@@ -12,9 +12,9 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         {
             usuarios= new List<Usuario>()
             {
-                new Usuario{id=1,nombre="Sofia",apellidos="Pedroza",direccion="calle26b",telefono="3188166247"},
-                new Usuario{id=2,nombre="Alejandro",apellidos="Pedroza",direccion="calle26b",telefono="3112166247"},
-                new Usuario{id=3,nombre="Julian",apellidos="Montufar",direccion="calle26b",telefono="3122166247"},
+                new Usuario{id=1,nombre="Sofia",apellidos="Pedroza",direccion="calle26b",telefono="3188166247",ciudad="Pasto"},
+                new Usuario{id=2,nombre="Alejandro",apellidos="Pedroza",direccion="calle26b",telefono="3112166247",ciudad="Pasto"},
+                new Usuario{id=3,nombre="Julian",apellidos="Montufar",direccion="calle26b",telefono="3122166247",ciudad="Pasto"},
  
             };
         }
