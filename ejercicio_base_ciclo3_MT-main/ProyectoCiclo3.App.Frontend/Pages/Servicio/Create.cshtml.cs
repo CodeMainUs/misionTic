@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class ListBusModel : PageModel
+    public class FormServicioModel : PageModel
     {
         public void OnGet()
         {
