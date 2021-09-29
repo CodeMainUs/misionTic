@@ -1,34 +1,25 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListUsuarioModel
 @{
 }
  
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Jhon</td>
-      <td>Facebook</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Arias</td>
-      <td>Instagram</td>
-    </tr>
-  </tbody>
+<h1>Listado de Usuario</h1>
+<table class="table">
+    @foreach (var usuarios in Model.usuarios)
+    {
+        <tr>
+            <td>@usuarios.id</td>
+            <td>@usuarios.nombre</td>
+            <td>@usuarios.apellidos</td>
+            <td>@usuarios.direccion</td>
+            <td>@usuarios.telefono</td>
+            <td>@usuarios.ciudad</td>
+            
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-usuarioId="@usuarios.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" href="">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
 </table>

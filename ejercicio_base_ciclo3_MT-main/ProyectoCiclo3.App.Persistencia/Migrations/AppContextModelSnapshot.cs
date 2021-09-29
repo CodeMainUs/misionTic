@@ -77,8 +77,8 @@ namespace ProyectoCiclo3.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("apellidos")
-                        .HasColumnType("int");
+                    b.Property<string>("apellidos")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("direccion")
                         .HasColumnType("nvarchar(max)");
