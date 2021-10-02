@@ -21,12 +21,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Inicio</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Usuario/Create">Crear Usuario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Usuario/List">Listar Usuario</a>
-                        </li>
+                        <div class="dropdown">
+  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Usuario
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" asp-area="" asp-page="/Usuario/Create">Crear Usuario</a>
+    <a class="dropdown-item  text-dark" asp-area="" asp-page="/Usuario/List">Listar Usuario</a>
+
+  </div>
+</div>
+                        
+                        
                     </ul>
                 </div>
             </div>
