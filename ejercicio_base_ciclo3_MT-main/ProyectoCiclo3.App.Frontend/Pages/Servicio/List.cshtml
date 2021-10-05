@@ -1,0 +1,39 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.ListServicioModel
+@{
+}
+ 
+<h1>Listado de Servicio</h1>
+<table class="table">
+  <thead>
+        <th>Id</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Encomienda</th>
+        <th>Hora</th>
+        <th>Fecha</th>
+        <th>Informacion</th>
+        
+    </thead>
+    @foreach (var servit in Model.servicios)
+    {
+        <tr>
+            <td>@servit.id</td>
+            <td>@servit.origen</td>
+            <td>@servit.destino</td>
+            <td>@servit.encomienda</td>
+            <td>@servit.hora</td>
+            <td>@servit.fecha</td>
+            
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-servicioId="@servit.id"><i class="fas fa-adjust"></i>Ver</a>
+               <a class="btn btn-info" asp-page="./Edit" asp-route-servicioId="@servit.id">Editar</a>
+           <form method="POST">
+            <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@servit.id">
+              <button type="submit"class="btn btn-danger" href="">Eliminar</button>
+            </form>
+
+              </td>
+        </tr>
+    }
+</table>

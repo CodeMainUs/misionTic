@@ -1,0 +1,21 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.FormServicioModel
+@{
+}
+<div class="text-center">
+      <form method="post">
+            <label for="origen" class="form-label">Origen:</label>
+            <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" required>
+            <label for="detino" class="form-label">Destino:</label>
+            <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" required>
+            <label for="encomienda" class="form-label">Encomienda:</label>
+            <input type="number" class="form-control" id="encomienda" name="encomienda" placeholder="Encomienda"
+                  required>
+            <label for="hora" class="form-label">Hora:</label>
+            <input type="text" class="form-control" id="hora" name="hora" placeholder="Hora" required>
+            <label for="fecha" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha" required>
+            <hr>
+            <button type="submit" class="btn btn-success">Enviar</button>
+      </form>
+</div>

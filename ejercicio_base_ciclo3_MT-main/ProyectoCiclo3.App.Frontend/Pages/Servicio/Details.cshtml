@@ -1,0 +1,17 @@
+﻿@page
+@model ProyectoCiclo3.App.Frontend.Pages.DetailsServicioModel
+@{
+   var servi = Model.servicio;
+}
+ 
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <b>id: </b> @servi.id</li>
+    <li class="list-group-item"> <b>Origen: </b> @servi.origen</li>
+    <li class="list-group-item"> <b>destino: </b> @servi.destino</li>
+    <li class="list-group-item"> <b>encomienda: </b> @servi.encomienda</li>
+    <li class="list-group-item"> <b>hora: </b> @servi.hora</li>
+    <li class="list-group-item"> <b>fecha: </b> @servi.fecha</li>
+    
+    
+  </ul>	
+

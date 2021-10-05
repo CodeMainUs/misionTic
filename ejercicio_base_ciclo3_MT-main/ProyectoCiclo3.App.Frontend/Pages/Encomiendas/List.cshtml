@@ -1,34 +1,39 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListEncomiendaModel
 @{
 }
  
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>Facebook</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Arias</td>
-      <td>Tik tok</td>
-    </tr>
-  </tbody>
+<h1>Listado de Encomienda</h1>
+<table class="table">
+   <thead>
+        <th>Id</th>
+        <th>Descripcion</th>
+        <th>Peso</th>
+        <th>Tipo</th>
+        <th>Presentacion</th>
+        <th>Info</th>
+        
+    </thead>
+
+    @foreach (var encom in Model.encomiendas)
+    {
+        <tr>
+            <td>@encom.id</td>
+            <td>@encom.descripcion</td>
+            <td>@encom.peso</td>
+            <td>@encom.tipo</td>
+            <td>@encom.presentacion</td>
+            
+            
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-encomiendaId="@encom.id"><i class="fas fa-adjust"></i>Ver</a>
+               <a class="btn btn-info" asp-page="./Edit" asp-route-encomiendaId="@encom.id">Editar</a>
+           <form method="POST">
+            <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@encom.id">
+              <button type="submit"class="btn btn-danger" href="">Eliminar</button>
+            </form>
+
+              </td>
+        </tr>
+    }
 </table>

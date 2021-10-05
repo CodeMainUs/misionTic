@@ -5,6 +5,15 @@
  
 <h1>Listado de Usuario</h1>
 <table class="table">
+   <thead>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
+    </thead>
+
     @foreach (var usuarios in Model.usuarios)
     {
         <tr>
