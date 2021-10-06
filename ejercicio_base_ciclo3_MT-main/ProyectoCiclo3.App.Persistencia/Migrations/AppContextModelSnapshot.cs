@@ -80,6 +80,9 @@ namespace ProyectoCiclo3.App.Persistencia.Migrations
                     b.Property<string>("apellidos")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ciudad")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("direccion")
                         .HasColumnType("nvarchar(max)");
 
