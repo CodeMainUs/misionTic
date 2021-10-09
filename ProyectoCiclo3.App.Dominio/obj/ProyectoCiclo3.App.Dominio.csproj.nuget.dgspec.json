@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {}
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "projectUniqueName": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
         "projectName": "ProyectoCiclo3.App.Dominio",
-        "projectPath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\obj\\",
+        "outputPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",

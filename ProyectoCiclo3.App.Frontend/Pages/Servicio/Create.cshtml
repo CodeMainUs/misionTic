@@ -1,12 +1,20 @@
 @page
-@model ProyectoCiclo3.App.Frontend.Pages.FormServicioModel
+@model ProyectoCiclo3.App.Frontend.Pages.FormServicioModel 
 @{
 }
 <div class="text-center">
       <form method="post">
             <label for="origen" class="form-label">Origen:</label>
-            <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" required>
+            <select name="origen" class="form-control">
+        <option value="">-</option>
+        @foreach (var usuario in Model.Usuarios)
+    {
+        <option value="@usuario.id">@usuario.nombre @usuario.apellidos - @usuario.ciudad</option>
+    }
+    </select>
+
             <label for="detino" class="form-label">Destino:</label>
+
             <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" required>
             <label for="encomienda" class="form-label">Encomienda:</label>
             <input type="number" class="form-control" id="encomienda" name="encomienda" placeholder="Encomienda"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0BeYjXucWyv20O0Hs9LNK73TYuxxyZCbMp57m9VhQ/Z421LrPHAkeVbEAinWqQ4iLG920qOqTDCE8y0RXOV8iA==",
+  "dgSpecHash": "n8KjhmXCfpPpmYotOMJVInDDNBy37PEF2HzTln8fZ/fhpR/TeRsY8Ep5sUD/aJQFJt6zfiVox2p4ntXNy61nyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+  "projectFilePath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

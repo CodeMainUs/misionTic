@@ -5744,11 +5744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+      "projectUniqueName": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
       "projectName": "ProyectoCiclo3.App.Frontend",
-      "projectPath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+      "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Frontend\\obj\\",
+      "outputPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5765,8 +5765,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\julia\\Desktop\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj"
+            "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
+              "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj"
             }
           }
         }
