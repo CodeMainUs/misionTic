@@ -6,25 +6,16 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioServicio
     {
-        List<Servicio> servicios;
+        private readonly AppContext _appContext = new AppContext();
  
-    public RepositorioServicio()
-        {
-            servicios= new List<Servicio>()
-            {
-                new Servicio{id=1,origen=2,destino=2,encomienda=1,hora="10:00",fecha=new DateTime(2015, 12, 31)},
-                new Servicio{id=2,origen=2,destino=2,encomienda=1,hora="10:00",fecha=new DateTime(2015, 12, 31)},
-                new Servicio{id=3,origen=2,destino=2,encomienda=1,hora="10:00",fecha=new DateTime(2015, 12, 31)},
- 
-            };
-        }
+    
  
         public IEnumerable<Servicio> GetAll()
         {
-            return servicios;
+            return _appContext.Servicios;
         }
         public Servicio Update(Servicio newServicio){
-            var serv= servicios.SingleOrDefault(b => b.id == newServicio.id);
+            var serv= _appContext.Servicios.SingleOrDefault(b => b.id == newServicio.id);
             if(serv != null){
                 serv.id= newServicio.id;
                 serv.origen= newServicio.origen;
@@ -32,32 +23,28 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
                 serv.encomienda= newServicio.encomienda;
                 serv.hora= newServicio.hora;
                 serv.fecha= newServicio.fecha;
+                _appContext.SaveChanges();
                 
             }
         return serv;
         }
         public Servicio Create(Servicio newServicio)
         {
-           if(servicios.Count > 0){
-           newServicio.id=servicios.Max(r => r.id) +1; 
-            }else{
-               newServicio.id = 1; 
-            }
-           servicios.Add(newServicio);
-           return newServicio;
+          var addServicio = _appContext.Servicios.Add(newServicio);
+            _appContext.SaveChanges();
+            return addServicio.Entity;
         }
-        public Servicio Delete(int id)
+        public void Delete(int id)
         {
-        var servi= servicios.SingleOrDefault(b => b.id == id);
-        servicios.Remove(servi);
-        return servi;
+        var serv = _appContext.Servicios.Find(id);
+        if (serv == null)
+            return;
+        _appContext.Servicios.Remove(serv);
+        _appContext.SaveChanges();
+
         }
-
-
-
- 
         public Servicio GetServiWithId(int servicioid){
-            return servicios.SingleOrDefault(u => u.id == servicioid);
+            return _appContext.Servicios.Find(servicioid);
         }
     }
 
