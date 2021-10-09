@@ -15,13 +15,19 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         
         
       private readonly RepositorioServicio _repositorioServicio;
+      private readonly RepositorioUsuario _repositorioUsuario;
+      private readonly RepositorioEncomienda _repositorioEncomienda;
+      public IEnumerable<Usuario> Usuarios{get;set;}
+      public IEnumerable<Encomienda> Encomiendas{get;set;}
       [BindProperty]
-              public Servicio servicios {get;set;}
+      public Servicio servicios {get;set;}
  
-        public FormServicioModel (RepositorioServicio _repositorioServicio)
+        public FormServicioModel (RepositorioServicio _repositorioServicio, RepositorioUsuario _repositorioUsuario,RepositorioEncomienda _repositorioEncomienda)
        {
             
             this._repositorioServicio=_repositorioServicio;
+            this._repositorioUsuario=_repositorioUsuario;
+            this._repositorioEncomienda=_repositorioEncomienda;
        }
        
         public IActionResult OnPost()
@@ -35,6 +41,11 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             
             return RedirectToPage("./List");
         }
+        public void OnGet()
+    {
+        Usuarios=_repositorioUsuario.GetAll();
+        Encomiendas=_repositorioEncomienda.GetAll();
+    }
 
     }
 }
