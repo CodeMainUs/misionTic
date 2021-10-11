@@ -7,11 +7,28 @@
   <div class="text-center">
     <form method="post">
 <label for="origen" class="form-label">Origen:</label>
-      <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" asp-for="@serv.origen">
+       <select name="origen" class="form-control">
+        <option value="">-</option>
+        @foreach (var usuario in Model.Usuarios)
+    {
+        <option value="@usuario.id">@usuario.nombre - @usuario.apellidos - @usuario.ciudad</option>
+    }
+    </select>
       <label for="detino" class="form-label">Destino:</label>
-      <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" asp-for="@serv.destino">
+      <select name="destino" class="form-control">
+        <option value="">-</option>
+        @foreach (var usuario in Model.Usuarios)
+    {
+        <option value="@usuario.id">  @usuario.ciudad - @usuario.direccion</option>
+    }
+    </select>
 <label for="encomienda" class="form-label">Encomienda:</label>
-      <input type="number" class="form-control" id="encomienda" name="encomienda" placeholder="Encomienda" asp-for="@serv.encomienda">
+      <select name="encomienda" class="form-control">
+        <option value="">-</option>
+        @foreach (var encomienda in Model.Encomiendas)
+    {
+        <option value="@encomienda.id">@encomienda.descripcion - @encomienda.peso - @encomienda.tipo - @encomienda.presentacion</option>
+    }
       <label for="hora" class="form-label">Hora:</label>
       <input type="time" class="form-control" id="hora" name="hora" placeholder="Hora" asp-for="@serv.hora">
 <label for="fecha" class="form-label">Fecha:</label>
