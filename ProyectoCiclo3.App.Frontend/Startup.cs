@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authentication;
 
 namespace ProyectoCiclo3.App.Frontend
 {
@@ -28,6 +29,8 @@ namespace ProyectoCiclo3.App.Frontend
             services.AddSingleton<RepositorioUsuario>();
             services.AddSingleton<RepositorioServicio>();
             services.AddSingleton<RepositorioEncomienda>();
+              services.AddControllersWithViews();
+
 
         }
 
@@ -37,6 +40,8 @@ namespace ProyectoCiclo3.App.Frontend
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStaticFiles();
+
             }
             else
             {
@@ -49,6 +54,8 @@ namespace ProyectoCiclo3.App.Frontend
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
+
 
             app.UseAuthorization();
 
