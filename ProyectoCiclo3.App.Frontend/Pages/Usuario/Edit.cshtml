@@ -6,6 +6,7 @@
 
   <div class="text-center">
     <form method="post">
+          <input type="number" class="d-none" id="id"  placeholder="ID" asp-for="@usuario.id">
 <label for="nombre" class="form-label">Nombre:</label>
       <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" asp-for="@usuario.nombre">
       <label for="apellidos" class="form-label">Apellidos:</label>

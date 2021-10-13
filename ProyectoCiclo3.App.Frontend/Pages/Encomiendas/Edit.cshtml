@@ -6,6 +6,7 @@
 
   <div class="text-center">
     <form method="post">
+      <input type="number" class="d-none" id="id"  placeholder="ID" asp-for="@encomienda.id">
 <label for="descripcion" class="form-label">Descripcion:</label>
       <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" asp-for="@encomienda.descripcion">
       <label for="peso" class="form-label">Peso producto:</label>
