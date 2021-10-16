@@ -8,14 +8,25 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
     {
         
  
- private readonly AppContext _appContext = new AppContext();
+        private readonly AppContext _appContext = new AppContext();
  
         public IEnumerable<Usuario> GetAll()
         {
             return _appContext.Usuarios;
         }
-        public Usuario Update(Usuario newusuario){
-            var usuario= _appContext.Usuarios.SingleOrDefault(b => b.id == newusuario.id);
+        public Usuario GetUserWithId(int id){
+            return _appContext.Usuarios.Find(id);
+        }
+      
+        public Usuario Create(Usuario newusuario)
+        {
+            var addUsuario = _appContext.Usuarios.Add(newusuario);
+            _appContext.SaveChanges();
+            return addUsuario.Entity;
+
+        }
+          public Usuario Update(Usuario newusuario){
+            var usuario= _appContext.Usuarios.Find(newusuario.id);
             if(usuario != null){
                 usuario.id= newusuario.id;
                 usuario.nombre= newusuario.nombre;
@@ -28,29 +39,20 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             }
         return usuario;
         }
-        public Usuario Create(Usuario newusuario)
-        {
-            var addUsuario = _appContext.Usuarios.Add(newusuario);
-            _appContext.SaveChanges();
-            return addUsuario.Entity;
-
-        }
         public void Delete(int id)
         {
-         var user = _appContext.Usuarios.Find(id);
-        if (user == null)
-            return;
-        _appContext.Usuarios.Remove(user);
-        _appContext.SaveChanges();
+             var user = _appContext.Usuarios.Find(id);
+                if (user == null)
+                    return;
+            _appContext.Usuarios.Remove(user);
+            _appContext.SaveChanges();
 
         }
 
 
 
  
-        public Usuario GetUserWithId(int usuarioid){
-            return _appContext.Usuarios.Find(usuarioid);
-        }
+        
     }
 
     

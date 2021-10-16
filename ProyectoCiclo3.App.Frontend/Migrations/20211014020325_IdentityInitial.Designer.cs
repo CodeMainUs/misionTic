@@ -10,7 +10,7 @@ using ProyectoCiclo3.App.Frontend.Areas.Identity.Data;
 namespace ProyectoCiclo3.App.Frontend.Migrations
 {
     [DbContext(typeof(IdentityDataContext))]
-    [Migration("20211013013449_IdentityInitial")]
+    [Migration("20211014020325_IdentityInitial")]
     partial class IdentityInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

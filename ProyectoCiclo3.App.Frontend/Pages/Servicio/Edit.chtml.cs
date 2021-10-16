@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
+    [Authorize]
     public class EditServicioModel : PageModel
     {
         
@@ -39,15 +41,15 @@ namespace ProyectoCiclo3.App.Frontend.Pages
                 return Page();
  
         }
-        public IActionResult OnPost()
+        public IActionResult OnPost(Servicio newServ)
         {
             if(!ModelState.IsValid)
             {
                 return Page();
             }
-            if(servicios.id>0)
+            if(newServ.id>0)
             {
-            servicios = _repositorioServicio.Update(servicios);
+                servicios = _repositorioServicio.Update(newServ);
             }
             return Page();
         }
