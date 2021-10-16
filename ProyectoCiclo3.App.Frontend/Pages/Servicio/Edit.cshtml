@@ -1,40 +1,50 @@
 @page
 @model ProyectoCiclo3.App.Frontend.Pages.EditServicioModel
 @{
-    var serv = Model.servicios;
+  var servit = Model.servicios;
 }
 
-  <div class="text-center">
-    <form method="post">
-      <input type="number" class="d-none" id="id"  placeholder="ID" asp-for="@serv.id">
-<label for="origen" class="form-label">Origen:</label>
-       <select name="origen" class="form-control">
-        <option value="">-</option>
+<div class="text-center">
+  <form method="post">
+    <input type="number" class="form-control d-none" id="id" name="id" placeholder="Id" asp-for="@servit.id">
+    <label for="origen" class="form-label">Origen:</label>
+    <select name="origen" class="form-control">
+      <option value="">-</option>
         @foreach (var usuario in Model.Usuarios)
-    {
+        {
         <option value="@usuario.id">@usuario.nombre - @usuario.apellidos - @usuario.ciudad</option>
-    }
+
+
+
+        }
     </select>
-      <label for="detino" class="form-label">Destino:</label>
-      <select name="destino" class="form-control">
-        <option value="">-</option>
+    <label for="detino" class="form-label">Destino:</label>
+    <select name="destino" class="form-control">
+      <option value="">-</option>
         @foreach (var usuario in Model.Usuarios)
-    {
-        <option value="@usuario.id">  @usuario.ciudad - @usuario.direccion</option>
-    }
+        {
+        <option value="@usuario.id"> @usuario.ciudad - @usuario.direccion</option>
+
+
+
+        }
     </select>
-<label for="encomienda" class="form-label">Encomienda:</label>
-      <select name="encomienda" class="form-control">
-        <option value="">-</option>
+    <label for="encomienda" class="form-label">Encomienda:</label>
+    <select name="encomienda" class="form-control">
+      <option value="">-</option>
         @foreach (var encomienda in Model.Encomiendas)
-    {
-        <option value="@encomienda.id">@encomienda.descripcion - @encomienda.peso - @encomienda.tipo - @encomienda.presentacion</option>
-    }
+        {
+        <option value="@encomienda.id">@encomienda.descripcion - @encomienda.peso - @encomienda.tipo -
+            @encomienda.presentacion</option>
+
+
+
+        }
       <label for="hora" class="form-label">Hora:</label>
-      <input type="time" class="form-control" id="hora" name="hora" placeholder="Hora" asp-for="@serv.hora">
-<label for="fecha" class="form-label">Fecha:</label>
-      <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha" asp-for="@serv.fecha">
+      <input type="time" class="form-control" id="hora" name="hora" placeholder="Hora">
+      <label for="fecha" class="form-label">Fecha:</label>
+      <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha">
       <hr>
-<button type="submit" class="btn btn-success">Enviar</button>
-    </form>
-  </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>

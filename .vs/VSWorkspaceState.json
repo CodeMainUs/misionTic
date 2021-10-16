@@ -3,9 +3,12 @@
     "",
     "\\ProyectoCiclo3.App.Frontend",
     "\\ProyectoCiclo3.App.Frontend\\Pages",
+    "\\ProyectoCiclo3.App.Frontend\\Pages\\Servicio",
     "\\ProyectoCiclo3.App.Frontend\\Pages\\Shared",
-    "\\ProyectoCiclo3.App.Frontend\\Pages\\Usuario"
+    "\\ProyectoCiclo3.App.Frontend\\Pages\\Usuario",
+    "\\ProyectoCiclo3.App.Persistencia",
+    "\\ProyectoCiclo3.App.Persistencia\\AppRepositorios"
   ],
-  "SelectedNode": "\\ProyectoCiclo3.App.Frontend\\Pages\\Usuario\\List.cshtml",
+  "SelectedNode": "\\ProyectoCiclo3.App.Frontend\\Pages\\Usuario\\Edit.chtml.cs",
   "PreviewInSolutionExplorer": false
 }

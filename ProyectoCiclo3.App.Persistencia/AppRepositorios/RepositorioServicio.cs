@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using ProyectoCiclo3.App.Dominio;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore;
 namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioServicio
@@ -10,12 +11,31 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
  
     
  
-        public IEnumerable<Servicio> GetAll()
+      public IEnumerable<Servicio> GetAll()
         {
-            return _appContext.Servicios;
+           return _appContext.Servicios.Include(u => u.origen)
+                       .Include(u => u.destino).
+                       Include(e => e.encomienda);
         }
-        public Servicio Update(Servicio newServicio){
-            var serv= _appContext.Servicios.SingleOrDefault(b => b.id == newServicio.id);
+          public Servicio GetServiWithId(int servicioid){
+            return _appContext.Servicios.Find(servicioid);
+        }
+        
+        public Servicio Create(int origen,int destino,string fecha,string hora, int encomienda)
+        {
+          var newServicio = new Servicio();
+          newServicio.destino = _appContext.Usuarios.Find(destino);
+          newServicio.origen = _appContext.Usuarios.Find(origen);
+          newServicio.encomienda = _appContext.Encomiendas.Find(encomienda);
+          newServicio.fecha = DateTime.Parse(fecha);
+          newServicio.hora = hora;
+          
+            var addServicio = _appContext.Servicios.Add(newServicio);
+            _appContext.SaveChanges();
+            return addServicio.Entity;
+        }
+       public Servicio Update(Servicio newServicio){
+            var serv= _appContext.Servicios.Find(newServicio.id);
             if(serv != null){
                 serv.id= newServicio.id;
                 serv.origen= newServicio.origen;
@@ -28,12 +48,6 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             }
         return serv;
         }
-        public Servicio Create(Servicio newServicio)
-        {
-          var addServicio = _appContext.Servicios.Add(newServicio);
-            _appContext.SaveChanges();
-            return addServicio.Entity;
-        }
         public void Delete(int id)
         {
         var serv = _appContext.Servicios.Find(id);
@@ -43,9 +57,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         _appContext.SaveChanges();
 
         }
-        public Servicio GetServiWithId(int servicioid){
-            return _appContext.Servicios.Find(servicioid);
-        }
+      
     }
 
     

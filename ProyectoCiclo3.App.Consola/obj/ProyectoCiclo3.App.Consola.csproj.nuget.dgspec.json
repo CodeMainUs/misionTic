@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj": {}
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj": {}
   },
   "projects": {
-    "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj": {
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
+        "projectUniqueName": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
         "projectName": "ProyectoCiclo3.App.Consola",
-        "projectPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
+        "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Consola\\obj\\",
+        "outputPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
-                "projectPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj"
+              "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
+                "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "projectUniqueName": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
         "projectName": "ProyectoCiclo3.App.Dominio",
-        "projectPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
+        "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\obj\\",
+        "outputPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -125,6 +125,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -141,14 +145,14 @@
         }
       }
     },
-    "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
+    "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj",
+        "projectUniqueName": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj",
         "projectName": "ProyectoCiclo3.App.Persistencia",
-        "projectPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj",
+        "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\ProyectoCiclo3.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Persistencia\\obj\\",
+        "outputPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -165,8 +169,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
-                "projectPath": "E:\\U_DE_CALDAS\\ejercicio_base_ciclo3_MT-main\\ejercicio_base_ciclo3_MT-main\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj"
+              "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj": {
+                "projectPath": "E:\\U_DE_CALDAS\\misionTic\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj"
               }
             }
           }
