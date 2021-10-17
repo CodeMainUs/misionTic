@@ -34,15 +34,16 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             _appContext.SaveChanges();
             return addServicio.Entity;
         }
-       public Servicio Update(Servicio newServicio){
-            var serv= _appContext.Servicios.Find(newServicio.id);
+       public Servicio Update(int Id,int origen,int destino,string fecha,string hora, int encomienda){
+            var serv= _appContext.Servicios.Find(Id);
             if(serv != null){
-                serv.id= newServicio.id;
-                serv.origen= newServicio.origen;
-                serv.destino= newServicio.destino;
-                serv.encomienda= newServicio.encomienda;
-                serv.hora= newServicio.hora;
-                serv.fecha= newServicio.fecha;
+                
+                
+              serv.destino = _appContext.Usuarios.Find(destino);
+              serv.origen = _appContext.Usuarios.Find(origen);
+               serv.encomienda = _appContext.Encomiendas.Find(encomienda);
+                serv.hora= hora;
+                serv.fecha= DateTime.Parse(fecha);
                 _appContext.SaveChanges();
                 
             }
