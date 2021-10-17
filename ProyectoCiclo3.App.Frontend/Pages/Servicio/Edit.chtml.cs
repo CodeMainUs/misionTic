@@ -17,13 +17,11 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         
       private readonly RepositorioUsuario _repositorioUsuario;
       private readonly RepositorioEncomienda _repositorioEncomienda;
-      public IEnumerable<Usuario> Usuarios{get;set;}
-      public IEnumerable<Encomienda> Encomiendas{get;set;}
-        
-        
       private readonly RepositorioServicio _repositorioServicio;
       [BindProperty]
               public Servicio servicios {get;set;}
+              public IEnumerable<Usuario> Usuarios{get;set;}
+              public IEnumerable<Encomienda> Encomiendas{get;set;}
  
         public EditServicioModel (RepositorioServicio _repositorioServicio,RepositorioUsuario _repositorioUsuario,RepositorioEncomienda _repositorioEncomienda)
        {
@@ -33,25 +31,25 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             this._repositorioEncomienda=_repositorioEncomienda;
        }
  
-        public IActionResult OnGet(int usuarioid)
+        public IActionResult OnGet(int servicioid)
         {
-                servicios = _repositorioServicio.GetServiWithId(usuarioid);
+                servicios = _repositorioServicio.GetServiWithId(servicioid);
                 Usuarios = _repositorioUsuario.GetAll();
                 Encomiendas = _repositorioEncomienda.GetAll();
                 return Page();
  
         }
-        public IActionResult OnPost(Servicio newServ)
+        public IActionResult OnPost(int Id,int origen,int destino,string fecha,string hora, int encomienda)
         {
             if(!ModelState.IsValid)
             {
                 return Page();
             }
-            if(newServ.id>0)
+            if(servicios.id>0)
             {
-                servicios = _repositorioServicio.Update(newServ);
+                servicios = _repositorioServicio.Update(Id,origen, destino, fecha, hora, encomienda);
             }
-            return Page();
+            return RedirectToPage("./List");
         }
 
     }
